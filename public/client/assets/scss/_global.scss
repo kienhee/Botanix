@@ -1,0 +1,163 @@
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+.submit-project {
+    margin: 1rem 0px 2rem;
+    font-size: 1.6rem;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+}
+.submit-project::before,
+.submit-project::after {
+    border: 0px solid transparent;
+    transition: all 0.3s ease 0s;
+    content: "";
+    height: 0px;
+    position: absolute;
+    width: 25px;
+}
+#countdown {
+    color: #1677ff;
+}
+.submit-project:hover::before,
+.submit-project:hover::after {
+    width: 100%;
+}
+.submit-project:hover {
+    color: #1677ff;
+}
+.submit-project::before {
+    border-top: 2px solid rgb(255, 255, 255);
+    right: 0px;
+    top: -6px;
+}
+.submit-project::after {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    bottom: -6px;
+    left: 0px;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.form__input {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    visibility: inherit;
+
+    &:focus {
+        border: 1px solid #1677ff;
+        outline: none;
+    }
+}
+.form__require {
+    color: red;
+}
+.form__error {
+    border: 1px solid red;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn-outline {
+    border: 1px solid #fff;
+    &:hover {
+        border-color: #1677ff;
+    }
+}
+
+.btn-primary {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(27, 82, 237, 0.15) 0px 4px 32px;
+    backdrop-filter: blur(2px);
+    border: 1px solid #fff;
+    &:hover {
+        border-color: #1677ff;
+    }
+}
+.tag {
+    border-radius: 0.4rem;
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+    padding: 0.1rem 0.55rem;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(27, 82, 237, 0.15) 0px 4px 32px;
+    backdrop-filter: blur(2px);
+    margin-bottom: 10px;
+    &:hover {
+        color: #1677ff;
+    }
+}
+
+.image-selector-container {
+    position: relative;
+    margin-bottom: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.image-selector {
+    position: relative;
+}
+
+.image-preview {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px dashed #ccc;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    &-error {
+        border: 2px dashed red;
+    }
+}
+
+.image-preview span {
+    display: block;
+    padding-top: 65px;
+    font-size: 14px;
+    color: #333;
+}
+
+#file-input {
+    display: none;
+}
+
+#preview-image {
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    display: none;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 2px;
+    border: 1px dashed;
+}

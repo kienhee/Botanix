@@ -1,0 +1,133 @@
+.project {
+  margin-bottom: 100px;
+  color: #fff;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    &-title {
+      font-size: 28px;
+      font-weight: 900;
+    }
+  }
+  &__category {
+    &-list {
+      padding: 10px;
+      width: 200px;
+      height: fit-content;
+      background: rgba(34, 34, 34, 0.05);
+      border-radius: 0.6rem;
+      box-shadow: rgba(34, 34, 34, 0.05) 0px 0.1rem 0.4rem;
+      display: inline-flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 20px 10px;
+      border: 1px solid rgba(238, 238, 238, 0.5);
+    }
+
+    &-btn {
+      display: none;
+    }
+    &-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 15px;
+      & .active {
+        width: 100%;
+        background: rgb(255, 255, 255);
+        box-shadow: rgba(34, 34, 34, 0.05) 0px 0.1rem 0.4rem;
+        color: rgb(34, 34, 34);
+      }
+    }
+    &-element {
+      border-radius: 0.4rem;
+      font-size: 16px;
+      margin: 0px 0.05rem;
+      padding: 0.2rem 0.4rem;
+      font-weight: 500;
+      transition: all 0.4s ease 0s;
+      cursor: pointer;
+      &:hover {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: rgba(34, 34, 34, 0.05) 0px 0.1rem 0.4rem;
+        color: #fff;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    gap: 50px;
+  }
+  &__list {
+    width: 100%;
+
+    &-brand {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+  }
+}
+.show-category-mobile {
+  display: block !important;
+}
+@media screen and (max-width: 767px) {
+  .project {
+    &__list-brand {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .project {
+    &__list-brand {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .project {
+    &__header {
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__container {
+      flex-direction: column;
+      gap: 25px;
+    }
+    &__category {
+      position: relative;
+      &-list {
+        width: 100%;
+        display: none;
+        position: absolute;
+        z-index: 10;
+        background-color: rgba(34, 34, 34, 1);
+        top: 50px;
+        left: 0;
+        right: 0;
+      }
+      &-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid rgba(238, 238, 238, 0.5);
+        border-radius: 0.6rem;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      &-box {
+        gap: 10px;
+      }
+      &-element {
+        font-size: 12px;
+      }
+    }
+  }
+}

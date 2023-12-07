@@ -1,0 +1,11 @@
+.disclaimer {
+  text-align: center;
+  margin-bottom: 50px;
+  &-strong {
+    color: #fff;
+    font-weight: 600;
+  }
+  & p {
+    font-size: 14px;
+  }
+}
