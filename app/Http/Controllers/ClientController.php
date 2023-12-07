@@ -13,7 +13,7 @@ class ClientController extends Controller
 {
     public function home()
     {
-        $trendings = Trending::orderBy('position', "DESC")->get();
+        $trendings = Trending::orderBy('position', "ASC")->get();
         return view('client.index', compact('trendings'));
     }
     public function project(Request $request)
